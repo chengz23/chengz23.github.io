@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Diffusion 学习路径指南!</title>
+    <link href="/2025/04/16/Diffusion%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84%E6%8C%87%E5%8D%97/"/>
+    <url>/2025/04/16/Diffusion%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84%E6%8C%87%E5%8D%97/</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这篇博客旨在梳理 diffusion 的学习路径，提供一个关于diffusion的整体框架。</p><h2 id="1-Diffusion-Models-Tutorials"><a href="#1-Diffusion-Models-Tutorials" class="headerlink" title="1. Diffusion Models Tutorials"></a>1. Diffusion Models Tutorials</h2><p>写给本科生和研究生初学者：</p><ol><li><a href="https://arxiv.org/abs/2403.18103">Tutorial on Diffusion Models for Imaging and Vision</a><br>不仅对Diffusion各种公式进行了汇总，还阐明了和其他已有生成模型如VAE的关系：</li><li><a href="https://arxiv.org/abs/2208.11970">Understanding Diffusion Models: A Unified Perspective</a><br>从deterministic sampler出发，不太关注随机的部分，进而讲到了flow matching，兼具基础和前沿：</li><li><a href="https://arxiv.org/abs/2406.08929">Step-by-Step Diffusion: An Elementary Tutorial</a></li></ol><p>不同方面的应用总结：<br>4. <a href="https://arxiv.org/abs/2209.00796">Diffusion Models: A Comprehensive Survey of Methods and Applications</a></p><h2 id="2-Diffusion-Models-基础入门必读"><a href="#2-Diffusion-Models-基础入门必读" class="headerlink" title="2. Diffusion Models 基础入门必读"></a>2. Diffusion Models 基础入门必读</h2><ol><li><p>DDPM: <a href="https://arxiv.org/abs/2006.11239">Denoising Diffusion Probabilistic Models</a><br>值得注意的是DDPM并不是最早提出Diffusion想法的文章，DDPM的贡献在于实现了这个idea并取得了很好的效果。</p></li><li><p>Noise Conditional Score Network(NCSN)s: <a href="https://arxiv.org/abs/1907.05600">Generative Modeling by Estimating Gradients of the Data Distribution</a><br>通过score matching的方式来估计数据分布概率密度的梯度。</p></li><li><p>Score-SDE: <a href="https://arxiv.org/abs/2011.13456">Score-Based Generative Modeling through Stochastic Differential Equations</a><br>在上面两篇的基础上用随机微分方程把Diffusion Model的理论框架统一。</p></li><li><p>EDM: <a href="https://arxiv.org/abs/2206.00364">Energy-Based Generative Modeling with Diffusion Processes</a><br>在noise schedule上做改进，提出了EDM的框架，对所有的Diffusion模型进行了统一。</p></li><li><p>DDIM: <a href="https://arxiv.org/abs/2010.02502">Denoising Diffusion Implicit Models</a><br>DDIM是对DDPM采样过程的一个改进，摆脱了马尔科夫链的限制，在采样过程中能够跳步，在较小的损失生成质量的情况下加快采样速度。</p></li><li><p>DPM-Solver: <a href="https://arxiv.org/abs/2206.00927">DPM-Solver: A Fast ODE Solver for Diffusion Probabilistic Models</a><br>用另一种方法改进了diffusion采样算法.</p></li><li><p>Latent Diffusion:<br><a href="https://arxiv.org/abs/2106.05931">Score-based Generative Modeling in Latent Space</a><br>把encoder-decoder与diffusion process结合，在latent space上进行diffusion。<br><a href="https://arxiv.org/abs/2112.10752">High-Resolution Image Synthesis with Latent Diffusion Models</a><br>Stable Diffusion的原始论文，相较于上一篇的改进是把encoder，decoder和diffusion的训练过程拆开。最终把图片生成的分辨率提高。</p></li></ol><h2 id="3-Diffusion-Models-进阶阅读"><a href="#3-Diffusion-Models-进阶阅读" class="headerlink" title="3. Diffusion Models 进阶阅读"></a>3. Diffusion Models 进阶阅读</h2><ol><li><p>Guidance:<br><a href="https://arxiv.org/abs/2105.05233">Diffusion Models Beat GANs on Image Synthesis</a><br><a href="https://arxiv.org/abs/2207.12598">Classifier-Free Diffusion Guidance</a></p></li><li><p>Flow Matching: <a href="https://arxiv.org/abs/2210.02747">Flow Matching for Generative Modeling</a></p></li><li><p>Rectified flow:<br><a href="https://arxiv.org/abs/2209.03003">Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow</a><br>改进：<a href="https://arxiv.org/abs/2405.20320">Improving the Training of Rectified Flows</a></p></li><li><p>Diffusion Schrödinger Bridge: <a href="https://arxiv.org/abs/2110.11291">Likelihood Training of Schrödinger Bridge using Forward-Backward SDEs Theory</a></p></li><li><p>Consistency model: <a href="https://arxiv.org/abs/2303.01469">Consistency Models</a></p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>Diffusion Models</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diffusion</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World, My First Blog!</title>
     <link href="/2025/03/26/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"/>
     <url>/2025/03/26/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</url>
