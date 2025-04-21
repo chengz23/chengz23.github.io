@@ -19,22 +19,22 @@
   <meta name="author" content="chengz23">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言这篇博客旨在梳理 diffusion 的学习路径，提供一个关于diffusion的整体框架。 1. Diffusion Models Tutorials写给本科生和研究生初学者：  Tutorial on Diffusion Models for Imaging and Vision不仅对Diffusion各种公式进行了汇总，还阐明了和其他已有生成模型如VAE的关系： Understandin">
+    <meta name="description" content="时空预测任务理解与思考一、前言最近看了中科院在 TKDE 上发表的一篇关于时空数据挖掘的综述论文：[Exploring Progress in Multivariate Time Series Forecasting: Comprehensive Benchmarking and Heterogeneity Analysis]。这篇文章让我对时空预测任务有了更深的理解。本篇博客主要是对这篇综述的总">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Diffusion 学习路径指南!">
-<meta property="og:url" content="https://chengz23.github.io/2025/04/16/Diffusion%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:title" content="关于 MT S的一些思考和介绍">
+<meta property="og:url" content="https://chengz23.github.io/2025/04/21/%E6%97%B6%E7%A9%BA%E9%A2%84%E6%B5%8B%E4%BB%8B%E7%BB%8D/index.html">
 <meta property="og:site_name" content="继续革命">
-<meta property="og:description" content="前言这篇博客旨在梳理 diffusion 的学习路径，提供一个关于diffusion的整体框架。 1. Diffusion Models Tutorials写给本科生和研究生初学者：  Tutorial on Diffusion Models for Imaging and Vision不仅对Diffusion各种公式进行了汇总，还阐明了和其他已有生成模型如VAE的关系： Understandin">
+<meta property="og:description" content="时空预测任务理解与思考一、前言最近看了中科院在 TKDE 上发表的一篇关于时空数据挖掘的综述论文：[Exploring Progress in Multivariate Time Series Forecasting: Comprehensive Benchmarking and Heterogeneity Analysis]。这篇文章让我对时空预测任务有了更深的理解。本篇博客主要是对这篇综述的总">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-04-16T14:30:00.000Z">
-<meta property="article:modified_time" content="2025-04-16T09:45:50.397Z">
+<meta property="article:published_time" content="2025-04-21T14:30:00.000Z">
+<meta property="article:modified_time" content="2025-04-21T11:42:10.845Z">
 <meta property="article:author" content="chengz23">
-<meta property="article:tag" content="Diffusion">
+<meta property="article:tag" content="时空数据">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Diffusion 学习路径指南! - 继续革命</title>
+  <title>关于 MT S的一些思考和介绍 - 继续革命</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -217,7 +217,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Diffusion 学习路径指南!"></span>
+            <span id="subtitle" data-typed-text="关于 MT S的一些思考和介绍"></span>
           
         </div>
 
@@ -228,8 +228,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-16 22:30" pubdate>
-          2025年4月16日 晚上
+        <time datetime="2025-04-21 22:30" pubdate>
+          2025年4月21日 晚上
         </time>
       </span>
     
@@ -240,7 +240,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          387 字
+          950 字
         
       </span>
     
@@ -251,7 +251,7 @@
         
         
         
-          4 分钟
+          8 分钟
         
       </span>
     
@@ -300,6 +300,43 @@
 <div class="category-list">
   
   
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="时空数据挖掘"
+        id="heading-34341c0051f12f9d34bf45c4065004d1" role="tab" data-toggle="collapse" href="#collapse-34341c0051f12f9d34bf45c4065004d1"
+        aria-expanded="true"
+      >
+        时空数据挖掘
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-34341c0051f12f9d34bf45c4065004d1"
+           role="tabpanel" aria-labelledby="heading-34341c0051f12f9d34bf45c4065004d1">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/04/21/%E6%97%B6%E7%A9%BA%E9%A2%84%E6%B5%8B%E4%BB%8B%E7%BB%8D/" title="关于 MT S的一些思考和介绍"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">关于 MT S的一些思考和介绍</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
 </div>
 
 
@@ -312,47 +349,110 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Diffusion 学习路径指南!</h1>
+            <h1 id="seo-header">关于 MT S的一些思考和介绍</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这篇博客旨在梳理 diffusion 的学习路径，提供一个关于diffusion的整体框架。</p>
-<h2 id="1-Diffusion-Models-Tutorials"><a href="#1-Diffusion-Models-Tutorials" class="headerlink" title="1. Diffusion Models Tutorials"></a>1. Diffusion Models Tutorials</h2><p>写给本科生和研究生初学者：</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2403.18103">Tutorial on Diffusion Models for Imaging and Vision</a><br>不仅对Diffusion各种公式进行了汇总，还阐明了和其他已有生成模型如VAE的关系：</li>
-<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2208.11970">Understanding Diffusion Models: A Unified Perspective</a><br>从deterministic sampler出发，不太关注随机的部分，进而讲到了flow matching，兼具基础和前沿：</li>
-<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2406.08929">Step-by-Step Diffusion: An Elementary Tutorial</a></li>
-</ol>
-<p>不同方面的应用总结：<br>4. <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2209.00796">Diffusion Models: A Comprehensive Survey of Methods and Applications</a></p>
-<h2 id="2-Diffusion-Models-基础入门必读"><a href="#2-Diffusion-Models-基础入门必读" class="headerlink" title="2. Diffusion Models 基础入门必读"></a>2. Diffusion Models 基础入门必读</h2><ol>
-<li><p>DDPM: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2006.11239">Denoising Diffusion Probabilistic Models</a><br>值得注意的是DDPM并不是最早提出Diffusion想法的文章，DDPM的贡献在于实现了这个idea并取得了很好的效果。</p>
+                <h1 id="时空预测任务理解与思考"><a href="#时空预测任务理解与思考" class="headerlink" title="时空预测任务理解与思考"></a>时空预测任务理解与思考</h1><h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>最近看了中科院在 TKDE 上发表的一篇关于时空数据挖掘的综述论文：[<strong>Exploring Progress in Multivariate Time Series Forecasting: Comprehensive Benchmarking and Heterogeneity Analysis</strong>]。这篇文章让我对时空预测任务有了更深的理解。本篇博客主要是对这篇综述的总结和一些个人的思考。</p>
+<hr>
+<h2 id="二、什么是-MTS？"><a href="#二、什么是-MTS？" class="headerlink" title="二、什么是 MTS？"></a>二、什么是 MTS？</h2><p><strong>MTS</strong>（Multivariate Time Series）即<strong>多变量时间序列</strong>，指由多个相互关联的变量组成的、有时间顺序的数据集合。它广泛应用于金融、气象、交通、医疗等领域。</p>
+<p>在 MTS 预测中，有两个核心任务：</p>
+<ul>
+<li><strong>LTSF（Long-Term Series Forecasting）</strong>：关注长期预测，建模长期依赖；</li>
+<li><strong>STF（Spatio-Temporal Forecasting）</strong>：关注时空建模，通过捕捉空间相关性提升预测性能。</li>
+</ul>
+<h3 id="LTSF-模型特点："><a href="#LTSF-模型特点：" class="headerlink" title="LTSF 模型特点："></a>LTSF 模型特点：</h3><ul>
+<li>序列层级相关建模（Series-level correlations）</li>
+<li>频率域建模（Frequency-based methods）</li>
+<li>Patch-based Transformer 等模型</li>
+</ul>
+<h3 id="STF-模型特点："><a href="#STF-模型特点：" class="headerlink" title="STF 模型特点："></a>STF 模型特点：</h3><ul>
+<li>结合卷积网络、图卷积网络与序列模型，形成时空神经网络（如 STGNN、TCN）</li>
+</ul>
+<h3 id="常用指标："><a href="#常用指标：" class="headerlink" title="常用指标："></a>常用指标：</h3><ul>
+<li><strong>绝对误差指标</strong>：MAE、MSE、RMSE</li>
+<li><strong>相对误差指标</strong>：MAPE、WAPE、SMAPE</li>
+</ul>
+<hr>
+<h2 id="三、训练与优化设置"><a href="#三、训练与优化设置" class="headerlink" title="三、训练与优化设置"></a>三、训练与优化设置</h2><h3 id="数据预处理："><a href="#数据预处理：" class="headerlink" title="数据预处理："></a>数据预处理：</h3><ul>
+<li>常用归一化方法：<ul>
+<li>Min-Max 归一化</li>
+<li>Z-score 标准化（多数研究采用）</li>
+</ul>
 </li>
-<li><p>Noise Conditional Score Network(NCSN)s: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1907.05600">Generative Modeling by Estimating Gradients of the Data Distribution</a><br>通过score matching的方式来估计数据分布概率密度的梯度。</p>
+</ul>
+<h3 id="训练技巧："><a href="#训练技巧：" class="headerlink" title="训练技巧："></a>训练技巧：</h3><ul>
+<li><strong>Masked MAE</strong> 通常比普通 MAE 更有效；</li>
+<li>可选技巧包括：<ul>
+<li>梯度裁剪（Gradient Clipping）</li>
+<li>课程学习（Curriculum Learning）</li>
+<li>……</li>
+</ul>
 </li>
-<li><p>Score-SDE: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2011.13456">Score-Based Generative Modeling through Stochastic Differential Equations</a><br>在上面两篇的基础上用随机微分方程把Diffusion Model的理论框架统一。</p>
-</li>
-<li><p>EDM: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.00364">Energy-Based Generative Modeling with Diffusion Processes</a><br>在noise schedule上做改进，提出了EDM的框架，对所有的Diffusion模型进行了统一。</p>
-</li>
-<li><p>DDIM: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2010.02502">Denoising Diffusion Implicit Models</a><br>DDIM是对DDPM采样过程的一个改进，摆脱了马尔科夫链的限制，在采样过程中能够跳步，在较小的损失生成质量的情况下加快采样速度。</p>
-</li>
-<li><p>DPM-Solver: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.00927">DPM-Solver: A Fast ODE Solver for Diffusion Probabilistic Models</a><br>用另一种方法改进了diffusion采样算法.</p>
-</li>
-<li><p>Latent Diffusion:<br><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2106.05931">Score-based Generative Modeling in Latent Space</a><br>把encoder-decoder与diffusion process结合，在latent space上进行diffusion。<br><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2112.10752">High-Resolution Image Synthesis with Latent Diffusion Models</a><br>Stable Diffusion的原始论文，相较于上一篇的改进是把encoder，decoder和diffusion的训练过程拆开。最终把图片生成的分辨率提高。</p>
-</li>
-</ol>
-<h2 id="3-Diffusion-Models-进阶阅读"><a href="#3-Diffusion-Models-进阶阅读" class="headerlink" title="3. Diffusion Models 进阶阅读"></a>3. Diffusion Models 进阶阅读</h2><ol>
-<li><p>Guidance:<br><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2105.05233">Diffusion Models Beat GANs on Image Synthesis</a><br><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2207.12598">Classifier-Free Diffusion Guidance</a></p>
-</li>
-<li><p>Flow Matching: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2210.02747">Flow Matching for Generative Modeling</a></p>
-</li>
-<li><p>Rectified flow:<br><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2209.03003">Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow</a><br>改进：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2405.20320">Improving the Training of Rectified Flows</a></p>
-</li>
-<li><p>Diffusion Schrödinger Bridge: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2110.11291">Likelihood Training of Schrödinger Bridge using Forward-Backward SDEs Theory</a></p>
-</li>
-<li><p>Consistency model: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2303.01469">Consistency Models</a></p>
-</li>
-</ol>
+</ul>
+<hr>
+<h2 id="四、不同数据集特点与模型选择建议"><a href="#四、不同数据集特点与模型选择建议" class="headerlink" title="四、不同数据集特点与模型选择建议"></a>四、不同数据集特点与模型选择建议</h2><p>高级模型通常具备较强的拟合能力与归纳偏置，适用于特定模式；而基础模型（如线性模型）泛化能力更强，适用于模式不明显的场景。</p>
+<h3 id="1-时间建模与模型选择"><a href="#1-时间建模与模型选择" class="headerlink" title="1. 时间建模与模型选择"></a>1. 时间建模与模型选择</h3><p>可将数据集按时间模式划分为三类：</p>
+<table>
+<thead>
+<tr>
+<th>时间模式类型</th>
+<th>建议模型类型</th>
+<th>原因说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模式稳定（stable）</td>
+<td>高级神经网络</td>
+<td>可学习复杂的周期性与模式</td>
+</tr>
+<tr>
+<td>分布漂移明显</td>
+<td>基础神经网络</td>
+<td>高级模型容易过拟合</td>
+</tr>
+<tr>
+<td>无明确模式</td>
+<td>基础神经网络</td>
+<td>拟合能力强反而容易学到虚假特征</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>✅ <strong>总结：</strong> 模式稳定数据适合高级模型；模式漂移或不明确时，基础模型可能更稳健。</p>
+</blockquote>
+<hr>
+<h3 id="2-空间建模与模型选择"><a href="#2-空间建模与模型选择" class="headerlink" title="2. 空间建模与模型选择"></a>2. 空间建模与模型选择</h3><p>将数据集按空间特性划分为两类：</p>
+<ul>
+<li><strong>存在空间样本不可区分性</strong>（Significant Spatial Sample Indistinguishability）</li>
+<li><strong>不存在空间样本不可区分性</strong></li>
+</ul>
+<p><strong>空间不可区分性</strong>是指：在相同时间点，不同位置的历史观测数据非常相似，但其未来演化却存在显著差异。这种异质性使得简单模型（如 MLP、RNN）难以区分不同空间位置的预测。</p>
+<blockquote>
+<p>与时间建模不同，<strong>空间依赖更难建模与评估</strong>，图卷积网络（GCNs）虽常用于空间建模，但对空间异质性的理解仍有待深入。</p>
+</blockquote>
+<h4 id="指标推荐："><a href="#指标推荐：" class="headerlink" title="指标推荐："></a>指标推荐：</h4><p>综述中推荐使用 <strong>r1 和 r2</strong> 两个指标量化空间不可区分性（可参考 STID、ST-Norm 的设计思路）。</p>
+<h4 id="建议总结："><a href="#建议总结：" class="headerlink" title="建议总结："></a>建议总结：</h4><table>
+<thead>
+<tr>
+<th>空间特性类型</th>
+<th>建议做法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>不存在显著空间不可区分性</td>
+<td>无需刻意建模空间依赖</td>
+</tr>
+<tr>
+<td>存在显著空间不可区分性</td>
+<td>需要显式建模异质性，可显著提升性能</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="五、个人思考"><a href="#五、个人思考" class="headerlink" title="五、个人思考"></a>五、个人思考</h2><p>这篇综述提供了系统的分析框架来理解不同模型在不同数据分布下的表现，对于今后选择模型、设计实验具有很强的指导意义。</p>
+<p>尤其是对<strong>空间不可区分性</strong>的定义与量化方式，弥补了当前研究中对于“空间依赖”缺乏定量分析的不足，也让我在今后的研究中会更加重视数据本身的异质性特征。</p>
+<hr>
+<p><em>写于清华校园某个夜晚 🌙</em></p>
 
                 
               </div>
@@ -371,7 +471,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Diffusion-Models/" class="category-chain-item">Diffusion Models</a>
+  <a href="/categories/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/" class="category-chain-item">时空数据挖掘</a>
   
   
 
@@ -386,7 +486,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Diffusion/" class="print-no-link">#Diffusion</a>
+        <a href="/tags/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE/" class="print-no-link">#时空数据</a>
       
     </div>
   
@@ -398,8 +498,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Diffusion 学习路径指南!</div>
-      <div>https://chengz23.github.io/2025/04/16/Diffusion学习路径指南/</div>
+      <div>关于 MT S的一些思考和介绍</div>
+      <div>https://chengz23.github.io/2025/04/21/时空预测介绍/</div>
     </div>
     <div class="license-meta">
       
@@ -411,7 +511,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月16日</div>
+          <div>2025年4月21日</div>
         </div>
       
       
@@ -443,18 +543,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/04/21/%E6%97%B6%E7%A9%BA%E9%A2%84%E6%B5%8B%E4%BB%8B%E7%BB%8D/" title="关于 MT S的一些思考和介绍">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">关于 MT S的一些思考和介绍</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/03/26/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" title="Hello World, My First Blog!">
-                        <span class="hidden-mobile">Hello World, My First Blog!</span>
+                      <a href="/2025/04/16/Diffusion%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84%E6%8C%87%E5%8D%97/" title="Diffusion 学习路径指南!">
+                        <span class="hidden-mobile">Diffusion 学习路径指南!</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
