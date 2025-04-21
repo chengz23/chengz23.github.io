@@ -19,15 +19,15 @@
   <meta name="author" content="chengz23">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言这篇博客旨在梳理 diffusion 的学习路径，提供一个关于diffusion的整体框架。 1. Diffusion Models Tutorials写给本科生和研究生初学者：  Tutorial on Diffusion Models for Imaging and Vision不仅对Diffusion各种公式进行了汇总，还阐明了和其他已有生成模型如VAE的关系： Understandin">
+    <meta name="description" content="目录 Diffusion 学习路径梳理 1. Diffusion Models 入门教程推荐 🧑‍🏫 基础入门教程 📚 应用与综述   2. Diffusion Models 基础入门必读 📌 核心论文 ⚙️ 采样与加速 🧠 潜空间建模   3. Diffusion Models 进阶阅读 🔍 Guidance（引导机制） 🔁 Flow Matching 方法 🚀 Rectifie">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Diffusion 学习路径指南!">
 <meta property="og:url" content="https://chengz23.github.io/2025/04/16/Diffusion%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="继续革命">
-<meta property="og:description" content="前言这篇博客旨在梳理 diffusion 的学习路径，提供一个关于diffusion的整体框架。 1. Diffusion Models Tutorials写给本科生和研究生初学者：  Tutorial on Diffusion Models for Imaging and Vision不仅对Diffusion各种公式进行了汇总，还阐明了和其他已有生成模型如VAE的关系： Understandin">
+<meta property="og:description" content="目录 Diffusion 学习路径梳理 1. Diffusion Models 入门教程推荐 🧑‍🏫 基础入门教程 📚 应用与综述   2. Diffusion Models 基础入门必读 📌 核心论文 ⚙️ 采样与加速 🧠 潜空间建模   3. Diffusion Models 进阶阅读 🔍 Guidance（引导机制） 🔁 Flow Matching 方法 🚀 Rectifie">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-04-16T14:30:00.000Z">
-<meta property="article:modified_time" content="2025-04-16T09:45:50.397Z">
+<meta property="article:modified_time" content="2025-04-21T11:48:18.565Z">
 <meta property="article:author" content="chengz23">
 <meta property="article:tag" content="Diffusion">
 <meta name="twitter:card" content="summary_large_image">
@@ -240,7 +240,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          387 字
+          494 字
         
       </span>
     
@@ -251,7 +251,7 @@
         
         
         
-          4 分钟
+          5 分钟
         
       </span>
     
@@ -317,42 +317,90 @@
             
               <div class="markdown-body">
                 
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这篇博客旨在梳理 diffusion 的学习路径，提供一个关于diffusion的整体框架。</p>
-<h2 id="1-Diffusion-Models-Tutorials"><a href="#1-Diffusion-Models-Tutorials" class="headerlink" title="1. Diffusion Models Tutorials"></a>1. Diffusion Models Tutorials</h2><p>写给本科生和研究生初学者：</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2403.18103">Tutorial on Diffusion Models for Imaging and Vision</a><br>不仅对Diffusion各种公式进行了汇总，还阐明了和其他已有生成模型如VAE的关系：</li>
-<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2208.11970">Understanding Diffusion Models: A Unified Perspective</a><br>从deterministic sampler出发，不太关注随机的部分，进而讲到了flow matching，兼具基础和前沿：</li>
-<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2406.08929">Step-by-Step Diffusion: An Elementary Tutorial</a></li>
-</ol>
-<p>不同方面的应用总结：<br>4. <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2209.00796">Diffusion Models: A Comprehensive Survey of Methods and Applications</a></p>
-<h2 id="2-Diffusion-Models-基础入门必读"><a href="#2-Diffusion-Models-基础入门必读" class="headerlink" title="2. Diffusion Models 基础入门必读"></a>2. Diffusion Models 基础入门必读</h2><ol>
-<li><p>DDPM: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2006.11239">Denoising Diffusion Probabilistic Models</a><br>值得注意的是DDPM并不是最早提出Diffusion想法的文章，DDPM的贡献在于实现了这个idea并取得了很好的效果。</p>
+                <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ul>
+<li><a href="#diffusion-%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84%E6%A2%B3%E7%90%86">Diffusion 学习路径梳理</a><ul>
+<li><a href="#1-diffusion-models-%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E6%8E%A8%E8%8D%90">1. Diffusion Models 入门教程推荐</a><ul>
+<li><a href="#-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B">🧑‍🏫 基础入门教程</a></li>
+<li><a href="#-%E5%BA%94%E7%94%A8%E4%B8%8E%E7%BB%BC%E8%BF%B0">📚 应用与综述</a></li>
+</ul>
 </li>
-<li><p>Noise Conditional Score Network(NCSN)s: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1907.05600">Generative Modeling by Estimating Gradients of the Data Distribution</a><br>通过score matching的方式来估计数据分布概率密度的梯度。</p>
+<li><a href="#2-diffusion-models-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%BF%85%E8%AF%BB">2. Diffusion Models 基础入门必读</a><ul>
+<li><a href="#-%E6%A0%B8%E5%BF%83%E8%AE%BA%E6%96%87">📌 核心论文</a></li>
+<li><a href="#%EF%B8%8F-%E9%87%87%E6%A0%B7%E4%B8%8E%E5%8A%A0%E9%80%9F">⚙️ 采样与加速</a></li>
+<li><a href="#-%E6%BD%9C%E7%A9%BA%E9%97%B4%E5%BB%BA%E6%A8%A1">🧠 潜空间建模</a></li>
+</ul>
 </li>
-<li><p>Score-SDE: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2011.13456">Score-Based Generative Modeling through Stochastic Differential Equations</a><br>在上面两篇的基础上用随机微分方程把Diffusion Model的理论框架统一。</p>
+<li><a href="#3-diffusion-models-%E8%BF%9B%E9%98%B6%E9%98%85%E8%AF%BB">3. Diffusion Models 进阶阅读</a><ul>
+<li><a href="#-guidance%E5%BC%95%E5%AF%BC%E6%9C%BA%E5%88%B6">🔍 Guidance（引导机制）</a></li>
+<li><a href="#-flow-matching-%E6%96%B9%E6%B3%95">🔁 Flow Matching 方法</a></li>
+<li><a href="#-rectified-flow-%E5%8F%8A%E6%94%B9%E8%BF%9B">🚀 Rectified Flow 及改进</a></li>
+<li><a href="#-schr%C3%B6dinger-bridge-%E6%96%B9%E6%B3%95">🔗 Schrödinger Bridge 方法</a></li>
+<li><a href="#-consistency-%E6%A8%A1%E5%9E%8B">🔄 Consistency 模型</a></li>
+</ul>
 </li>
-<li><p>EDM: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.00364">Energy-Based Generative Modeling with Diffusion Processes</a><br>在noise schedule上做改进，提出了EDM的框架，对所有的Diffusion模型进行了统一。</p>
+</ul>
 </li>
-<li><p>DDIM: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2010.02502">Denoising Diffusion Implicit Models</a><br>DDIM是对DDPM采样过程的一个改进，摆脱了马尔科夫链的限制，在采样过程中能够跳步，在较小的损失生成质量的情况下加快采样速度。</p>
+</ul>
+<h1 id="Diffusion-学习路径梳理"><a href="#Diffusion-学习路径梳理" class="headerlink" title="Diffusion 学习路径梳理"></a>Diffusion 学习路径梳理</h1><p>本博客旨在系统梳理 Diffusion 模型的学习路径，构建清晰的学习框架，便于本科生和研究生初学者快速入门并逐步进阶。</p>
+<hr>
+<!-- toc -->
+
+<h2 id="1-Diffusion-Models-入门教程推荐"><a href="#1-Diffusion-Models-入门教程推荐" class="headerlink" title="1. Diffusion Models 入门教程推荐"></a>1. Diffusion Models 入门教程推荐</h2><p>适合初学者阅读，内容通俗易懂、涵盖基础与前沿：</p>
+<h3 id="🧑‍🏫-基础入门教程"><a href="#🧑‍🏫-基础入门教程" class="headerlink" title="🧑‍🏫 基础入门教程"></a>🧑‍🏫 基础入门教程</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2403.18103"><strong>Tutorial on Diffusion Models for Imaging and Vision</strong></a><br>对 Diffusion 各类公式进行了系统汇总，并分析了与 VAE 等其他生成模型的联系。</p>
 </li>
-<li><p>DPM-Solver: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.00927">DPM-Solver: A Fast ODE Solver for Diffusion Probabilistic Models</a><br>用另一种方法改进了diffusion采样算法.</p>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2208.11970"><strong>Understanding Diffusion Models: A Unified Perspective</strong></a><br>从 deterministic sampler 角度出发，进一步引入 flow matching，兼具基础与前沿性。</p>
 </li>
-<li><p>Latent Diffusion:<br><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2106.05931">Score-based Generative Modeling in Latent Space</a><br>把encoder-decoder与diffusion process结合，在latent space上进行diffusion。<br><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2112.10752">High-Resolution Image Synthesis with Latent Diffusion Models</a><br>Stable Diffusion的原始论文，相较于上一篇的改进是把encoder，decoder和diffusion的训练过程拆开。最终把图片生成的分辨率提高。</p>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2406.08929"><strong>Step-by-Step Diffusion: An Elementary Tutorial</strong></a><br>逐步拆解 diffusion 原理，深入浅出，适合快速构建基本认知。</p>
 </li>
-</ol>
-<h2 id="3-Diffusion-Models-进阶阅读"><a href="#3-Diffusion-Models-进阶阅读" class="headerlink" title="3. Diffusion Models 进阶阅读"></a>3. Diffusion Models 进阶阅读</h2><ol>
-<li><p>Guidance:<br><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2105.05233">Diffusion Models Beat GANs on Image Synthesis</a><br><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2207.12598">Classifier-Free Diffusion Guidance</a></p>
+</ul>
+<h3 id="📚-应用与综述"><a href="#📚-应用与综述" class="headerlink" title="📚 应用与综述"></a>📚 应用与综述</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2209.00796"><strong>Diffusion Models: A Comprehensive Survey of Methods and Applications</strong></a><br>对 Diffusion 各种应用方向进行了全面总结，适合查阅使用场景。</li>
+</ul>
+<hr>
+<h2 id="2-Diffusion-Models-基础入门必读"><a href="#2-Diffusion-Models-基础入门必读" class="headerlink" title="2. Diffusion Models 基础入门必读"></a>2. Diffusion Models 基础入门必读</h2><h3 id="📌-核心论文"><a href="#📌-核心论文" class="headerlink" title="📌 核心论文"></a>📌 核心论文</h3><ul>
+<li><p><strong>DDPM</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2006.11239">Denoising Diffusion Probabilistic Models</a><br>虽非最早提出 Diffusion 思路，但首次实现并获得成功，意义重大。</p>
 </li>
-<li><p>Flow Matching: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2210.02747">Flow Matching for Generative Modeling</a></p>
+<li><p><strong>NCSN</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1907.05600">Generative Modeling by Estimating Gradients of the Data Distribution</a><br>使用 score matching 来估计数据分布梯度，开启了 score-based 模型的路径。</p>
 </li>
-<li><p>Rectified flow:<br><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2209.03003">Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow</a><br>改进：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2405.20320">Improving the Training of Rectified Flows</a></p>
+<li><p><strong>Score-SDE</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2011.13456">Score-Based Generative Modeling through Stochastic Differential Equations</a><br>用 SDE 统一前两类方法，为 diffusion 提供了坚实理论基础。</p>
 </li>
-<li><p>Diffusion Schrödinger Bridge: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2110.11291">Likelihood Training of Schrödinger Bridge using Forward-Backward SDEs Theory</a></p>
+<li><p><strong>EDM</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.00364">Energy-Based Generative Modeling with Diffusion Processes</a><br>从 noise schedule 入手，统一现有 Diffusion 模型框架。</p>
 </li>
-<li><p>Consistency model: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2303.01469">Consistency Models</a></p>
+</ul>
+<h3 id="⚙️-采样与加速"><a href="#⚙️-采样与加速" class="headerlink" title="⚙️ 采样与加速"></a>⚙️ 采样与加速</h3><ul>
+<li><p><strong>DDIM</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2010.02502">Denoising Diffusion Implicit Models</a><br>跳步采样技术，摆脱马尔科夫链，显著提升采样速度。</p>
 </li>
-</ol>
+<li><p><strong>DPM-Solver</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.00927">A Fast ODE Solver for Diffusion Probabilistic Models</a><br>另一种采样加速方式，基于 ODE 视角。</p>
+</li>
+</ul>
+<h3 id="🧠-潜空间建模"><a href="#🧠-潜空间建模" class="headerlink" title="🧠 潜空间建模"></a>🧠 潜空间建模</h3><ul>
+<li><strong>Latent Diffusion（LDM）</strong>:  <ul>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2106.05931">Score-based Generative Modeling in Latent Space</a><br>引入 encoder-decoder，将 Diffusion 模型迁移至 latent space。</li>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2112.10752">High-Resolution Image Synthesis with Latent Diffusion Models</a><br>即 Stable Diffusion 原始论文，进一步优化模块训练流程，提高图像质量。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="3-Diffusion-Models-进阶阅读"><a href="#3-Diffusion-Models-进阶阅读" class="headerlink" title="3. Diffusion Models 进阶阅读"></a>3. Diffusion Models 进阶阅读</h2><h3 id="🔍-Guidance（引导机制）"><a href="#🔍-Guidance（引导机制）" class="headerlink" title="🔍 Guidance（引导机制）"></a>🔍 Guidance（引导机制）</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2105.05233"><strong>Diffusion Models Beat GANs on Image Synthesis</strong></a>  </li>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2207.12598"><strong>Classifier-Free Diffusion Guidance</strong></a></li>
+</ul>
+<h3 id="🔁-Flow-Matching-方法"><a href="#🔁-Flow-Matching-方法" class="headerlink" title="🔁 Flow Matching 方法"></a>🔁 Flow Matching 方法</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2210.02747"><strong>Flow Matching for Generative Modeling</strong></a></li>
+</ul>
+<h3 id="🚀-Rectified-Flow-及改进"><a href="#🚀-Rectified-Flow-及改进" class="headerlink" title="🚀 Rectified Flow 及改进"></a>🚀 Rectified Flow 及改进</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2209.03003"><strong>Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow</strong></a>  </li>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2405.20320"><strong>Improving the Training of Rectified Flows</strong></a></li>
+</ul>
+<h3 id="🔗-Schrodinger-Bridge-方法"><a href="#🔗-Schrodinger-Bridge-方法" class="headerlink" title="🔗 Schrödinger Bridge 方法"></a>🔗 Schrödinger Bridge 方法</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2110.11291"><strong>Likelihood Training of Schrödinger Bridge using Forward-Backward SDEs Theory</strong></a></li>
+</ul>
+<h3 id="🔄-Consistency-模型"><a href="#🔄-Consistency-模型" class="headerlink" title="🔄 Consistency 模型"></a>🔄 Consistency 模型</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2303.01469"><strong>Consistency Models</strong></a></li>
+</ul>
+<hr>
+<p>如有补充推荐或建议，欢迎交流！🌱</p>
 
                 
               </div>
