@@ -4,7 +4,7 @@
   
   
   <entry>
-    <title>关于 MT S的一些思考和介绍</title>
+    <title>时空预测介绍</title>
     <link href="/2025/04/21/%E6%97%B6%E7%A9%BA%E9%A2%84%E6%B5%8B%E4%BB%8B%E7%BB%8D/"/>
     <url>/2025/04/21/%E6%97%B6%E7%A9%BA%E9%A2%84%E6%B5%8B%E4%BB%8B%E7%BB%8D/</url>
     
@@ -23,6 +23,44 @@
       <tag>时空数据</tag>
       
     </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>tmux终端详解!</title>
+    <link href="/2025/04/21/tmux%E4%BB%8B%E7%BB%8D/"/>
+    <url>/2025/04/21/tmux%E4%BB%8B%E7%BB%8D/</url>
+    
+    <content type="html"><![CDATA[<p>以下是你提供的内容，完整转换为 Markdown 源码格式：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section">## 前言</span><br><br>在日常科研和开发中，我们经常需要在远程服务器上运行长时间的任务，例如有时候进行编译，或者下载大文件需要比较长的时间，一般情况下是下班之后直接运行希望第二天早上过来运行完成，这样就不用耽误工作时间。但是网络有时候不稳定，可能在半夜会出现连接断掉的情况，一旦连接断掉，我们所执行的程序也就中断，我们当然可以写一个脚本后台运行，但是还是不方便。<br><br>一个稳定可靠、便捷高效的终端复用工具显得尤为重要。么有没有一种工具可以解决这样的问题呢。这就是我们这里要提到的tmux了。其实类似tmux的工具还有很多。例如gnu screen等。tmux刚好可以解决我们描述的问题，当我们在tmux中工作的时候，即使关掉SecureCRT的连接窗口，再次连接，进入tmux的会话我们之前的工作仍然在继续。本文将系统介绍 <span class="hljs-code">`tmux`</span> 的作用及其与 <span class="hljs-code">`nohup`</span> 的区别，附上常用命令清单，帮助你更高效地管理远程任务。<br><br>---<br><br><span class="hljs-section">## 1. 什么是 tmux？</span><br><br><span class="hljs-code">`tmux`</span>（terminal multiplexer）是一个终端复用器，它允许用户在同一个 SSH 会话中：<br><br><span class="hljs-bullet">-</span> 创建多个终端窗口和分屏  <br><span class="hljs-bullet">-</span> 在后台运行任务  <br><span class="hljs-bullet">-</span> 保持会话持续不断，即使断开网络也能重新连接  <br><br>简而言之，<span class="hljs-code">`tmux`</span> 是一个让你 <span class="hljs-strong">**“一次登录，永久在线”**</span> 的工具。<br><br>---<br><br><span class="hljs-section">## 2. tmux 与 nohup 的区别</span><br><br>| 特性            | tmux                                       | nohup                                 |<br>|-----------------|--------------------------------------------|----------------------------------------|<br>| 会话持久性      | 是，支持会话管理                           | 是，但需配合 <span class="hljs-code">`&amp;`</span> 手动后台执行         |<br>| 多窗口/分屏     | 支持，类似 IDE 分屏体验                    | 不支持                                 |<br>| 实时交互        | 支持，任务输出可交互查看和调试            | 不支持，仅将输出写入文件              |<br>| 查看历史输出    | 支持滚动查看历史                           | 依赖输出文件（<span class="hljs-code">`nohup.out`</span>）           |<br>| 使用复杂度      | 中等，命令较多但逻辑清晰                   | 低，语法简单                          |<br>| 推荐场景        | 多任务并行、需要交互或调试的长时间任务     | 简单命令行程序、无需交互的脚本任务    |<br><br>简言之，<span class="hljs-code">`nohup`</span> 更像是 “fire-and-forget”，而 <span class="hljs-code">`tmux`</span> 是一个功能完整的会话管理器，更像是 “fire-and-control”。<br><br><span class="hljs-section">（“fire-and-forget” 是一个来自军事领域的术语，原意是指导弹发射后无需继续控制，自动追踪目标完成任务。引申到计算机和编程语境里，它的意思是：“一旦启动（fire），就不管它了（forget）。”）</span><br><span class="hljs-section">---</span><br><br><span class="hljs-section">## 3. 如何在服务器使用 tmux？</span><br><br><span class="hljs-section">### 安装（如未安装）</span><br><br><span class="hljs-code">```bash</span><br><span class="hljs-code"># Ubuntu / Debian</span><br><span class="hljs-code">sudo apt install tmux</span><br><span class="hljs-code"></span><br><span class="hljs-code"># CentOS / RHEL</span><br><span class="hljs-code">sudo yum install tmux</span><br></code></pre></td></tr></table></figure><h3 id="创建会话"><a href="#创建会话" class="headerlink" title="创建会话"></a>创建会话</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tmux new -s mysession<br></code></pre></td></tr></table></figure><p>这将创建一个名为 <code>mysession</code> 的新会话。</p><h3 id="分离会话（任务继续运行）"><a href="#分离会话（任务继续运行）" class="headerlink" title="分离会话（任务继续运行）"></a>分离会话（任务继续运行）</h3><p>按下键盘：</p><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs armasm"><span class="hljs-symbol">Ctrl</span> + <span class="hljs-keyword">b</span> 然后按 d<br></code></pre></td></tr></table></figure><p>这将 “detach” 当前 tmux 会话，任务仍继续运行。</p><h3 id="查看当前会话"><a href="#查看当前会话" class="headerlink" title="查看当前会话"></a>查看当前会话</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tmux <span class="hljs-built_in">ls</span><br></code></pre></td></tr></table></figure><h3 id="恢复会话"><a href="#恢复会话" class="headerlink" title="恢复会话"></a>恢复会话</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tmux attach -t mysession<br></code></pre></td></tr></table></figure><p>如果你忘了会话名，可以先 <code>tmux ls</code> 查看。</p><h3 id="关闭会话"><a href="#关闭会话" class="headerlink" title="关闭会话"></a>关闭会话</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">exit</span><br></code></pre></td></tr></table></figure><p>或在 tmux 中直接关闭最后一个终端窗口。</p><hr><h2 id="4-tmux-常用命令汇总表"><a href="#4-tmux-常用命令汇总表" class="headerlink" title="4. tmux 常用命令汇总表"></a>4. tmux 常用命令汇总表</h2><table><thead><tr><th>操作</th><th>命令 &#x2F; 快捷键</th></tr></thead><tbody><tr><td>创建新会话</td><td><code>tmux new -s &lt;name&gt;</code></td></tr><tr><td>断开当前会话</td><td><code>Ctrl + b</code> 然后 <code>d</code></td></tr><tr><td>查看会话列表</td><td><code>tmux ls</code></td></tr><tr><td>恢复指定会话</td><td><code>tmux attach -t &lt;name&gt;</code></td></tr><tr><td>重命名会话</td><td><code>tmux rename-session -t old new</code></td></tr><tr><td>创建新窗口</td><td><code>Ctrl + b</code> 然后 <code>c</code></td></tr><tr><td>切换窗口</td><td><code>Ctrl + b</code> 然后 数字键 &#x2F; <code>n</code> &#x2F; <code>p</code></td></tr><tr><td>分割垂直窗格</td><td><code>Ctrl + b</code> 然后 <code>&quot;</code></td></tr><tr><td>分割水平窗格</td><td><code>Ctrl + b</code> 然后 <code>%</code></td></tr><tr><td>窗格间切换</td><td><code>Ctrl + b</code> 然后 方向键</td></tr><tr><td>关闭当前窗格</td><td>在窗格中运行 <code>exit</code> 或 <code>Ctrl + d</code></td></tr><tr><td>滚动历史输出</td><td><code>Ctrl + b</code> 然后 <code>[</code>，再用方向键滚动</td></tr><tr><td>复制模式</td><td><code>Ctrl + b</code> 然后 <code>[</code>，使用 <code>Space</code> 选中，再按 <code>Enter</code> 复制</td></tr><tr><td>粘贴</td><td><code>Ctrl + b</code> 然后 <code>]</code></td></tr></tbody></table><hr><h2 id="✨-总结"><a href="#✨-总结" class="headerlink" title="✨ 总结"></a>✨ 总结</h2><p><code>tmux</code> 是远程开发过程中不可或缺的工具之一，它相比 <code>nohup</code> 拥有更丰富的交互性和可控性，尤其适合科研、数据挖掘等需长时间训练和调试的场景。<br>&#96;&#96;&#96;</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Shell</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2025/04/21/Diffusion%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <url>/2025/04/21/Diffusion%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
     
   </entry>
   
