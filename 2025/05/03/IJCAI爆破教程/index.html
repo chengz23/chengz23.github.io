@@ -1,0 +1,868 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="chengz23">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="IJCAI 2025 投稿监控与经验总结 投稿 IJCAI 2025 是一次难忘的经历，本文记录了我的投稿过程、实时评分监控、Meta-review 获取方式等一些实用的经验，希望对未来准备 IJCAI 的朋友有所帮助。   📊 接受率与背景本年度 IJCAI 2025 的接受量 &#x2F; 投稿量为：  接受量：1042 投稿量：5404 接受率：19.3%  相比往年低于 15% 的接受率">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IJCAI 爆破教程!">
+<meta property="og:url" content="https://chengz23.github.io/2025/05/03/IJCAI%E7%88%86%E7%A0%B4%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="继续革命">
+<meta property="og:description" content="IJCAI 2025 投稿监控与经验总结 投稿 IJCAI 2025 是一次难忘的经历，本文记录了我的投稿过程、实时评分监控、Meta-review 获取方式等一些实用的经验，希望对未来准备 IJCAI 的朋友有所帮助。   📊 接受率与背景本年度 IJCAI 2025 的接受量 &#x2F; 投稿量为：  接受量：1042 投稿量：5404 接受率：19.3%  相比往年低于 15% 的接受率">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-05-03T14:30:00.000Z">
+<meta property="article:modified_time" content="2025-05-03T07:35:51.444Z">
+<meta property="article:author" content="chengz23">
+<meta property="article:tag" content="IJCAI">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>IJCAI 爆破教程! - 继续革命</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/macpanel.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"chengz23.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"pfkwd28QGcPFifeHP8qWjQo1-gzGzoHsz","app_key":"XH8XnSrh98kHazgszo262Jcn","server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>继续革命</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="IJCAI 爆破教程!"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-05-03 22:30" pubdate>
+          2025年5月3日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          17 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span>次
+        </span>
+        
+      
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="论文投稿"
+        id="heading-83a4e556ab2618fd566eef123f78a0a6" role="tab" data-toggle="collapse" href="#collapse-83a4e556ab2618fd566eef123f78a0a6"
+        aria-expanded="true"
+      >
+        论文投稿
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-83a4e556ab2618fd566eef123f78a0a6"
+           role="tabpanel" aria-labelledby="heading-83a4e556ab2618fd566eef123f78a0a6">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/05/03/IJCAI%E7%88%86%E7%A0%B4%E6%95%99%E7%A8%8B/" title="IJCAI 爆破教程!"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">IJCAI 爆破教程!</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">IJCAI 爆破教程!</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="IJCAI-2025-投稿监控与经验总结"><a href="#IJCAI-2025-投稿监控与经验总结" class="headerlink" title="IJCAI 2025 投稿监控与经验总结"></a>IJCAI 2025 投稿监控与经验总结</h1><blockquote>
+<p>投稿 IJCAI 2025 是一次难忘的经历，本文记录了我的投稿过程、实时评分监控、Meta-review 获取方式等一些实用的经验，希望对未来准备 IJCAI 的朋友有所帮助。</p>
+</blockquote>
+<hr>
+<h2 id="📊-接受率与背景"><a href="#📊-接受率与背景" class="headerlink" title="📊 接受率与背景"></a>📊 接受率与背景</h2><p>本年度 IJCAI 2025 的接受量 &#x2F; 投稿量为：</p>
+<ul>
+<li><strong>接受量</strong>：1042</li>
+<li><strong>投稿量</strong>：5404</li>
+<li><strong>接受率</strong>：<strong>19.3%</strong></li>
+</ul>
+<p>相比往年低于 15% 的接受率，这一数字确实提升不少。不过，今年 CMT 和 IJCAI 的各种系统 bug 也让人哭笑不得……</p>
+<hr>
+<h2 id="📈-实时监控审稿人是否改分"><a href="#📈-实时监控审稿人是否改分" class="headerlink" title="📈 实时监控审稿人是否改分"></a>📈 实时监控审稿人是否改分</h2><p>为了能及时掌握评分变化，能够通过python脚本来<strong>实时监控 CMT 上的评分变动</strong>，并支持邮件提醒。</p>
+<h3 id="🧠-原理"><a href="#🧠-原理" class="headerlink" title="🧠 原理"></a>🧠 原理</h3><p>利用 CMT 的 OData 接口，定时访问 ReviewViews 接口，记录当前的评分，并与之前抓取的结果做对比，一旦发生变动，通过邮箱提醒。</p>
+<h3 id="⚠️-注意事项"><a href="#⚠️-注意事项" class="headerlink" title="⚠️ 注意事项"></a>⚠️ 注意事项</h3><ul>
+<li>你需要在浏览器中登录 CMT，按 <code>F12</code> 打开开发者工具，在 <code>Application</code> 面板中获取你的 Cookie 信息。</li>
+<li>脚本支持记录日志，并将评分变化写入 <code>ijcai_monitor_log.json</code> 文件。</li>
+<li>支持邮件通知（使用 Outlook SMTP）。</li>
+</ul>
+<h3 id="💻-脚本源码"><a href="#💻-脚本源码" class="headerlink" title="💻 脚本源码"></a>💻 脚本源码</h3><details>
+<summary>点击查看评分监控脚本源码</summary>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><span class="hljs-keyword">import</span> time<br><span class="hljs-keyword">import</span> smtplib<br><span class="hljs-keyword">import</span> copy<br><span class="hljs-keyword">import</span> json<br><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime<br><span class="hljs-keyword">from</span> email.mime.text <span class="hljs-keyword">import</span> MIMEText<br><span class="hljs-keyword">from</span> email.mime.multipart <span class="hljs-keyword">import</span> MIMEMultipart<br><span class="hljs-keyword">import</span> platform<br><br><span class="hljs-comment"># xxxx is the reviewer id (replace it with your own reviewer ID)</span><br>urls = &#123;<br>    <span class="hljs-number">641</span>: <span class="hljs-string">&quot;https://cmt3.research.microsoft.com/api/odata/IJCAI2025/ReviewViews(641)&quot;</span>, <span class="hljs-comment">#4</span><br>    <span class="hljs-number">5149</span>: <span class="hljs-string">&quot;https://cmt3.research.microsoft.com/api/odata/IJCAI2025/ReviewViews(5149)&quot;</span>, <span class="hljs-comment">#6</span><br>    <span class="hljs-number">15758</span>: <span class="hljs-string">&quot;https://cmt3.research.microsoft.com/api/odata/IJCAI2025/ReviewViews(15758)&quot;</span>, <span class="hljs-comment">#6</span><br>    <span class="hljs-number">19890</span>: <span class="hljs-string">&quot;https://cmt3.research.microsoft.com/api/odata/IJCAI2025/ReviewViews(19890)&quot;</span>, <span class="hljs-comment">#7</span><br>&#125;<br><br><span class="hljs-comment"># 初始评分状态（第一次抓到后自动初始化）</span><br>last_scores = &#123;&#125;<br><br><span class="hljs-comment"># 日志记录</span><br>log_data = &#123;<br>    <span class="hljs-string">&quot;start_time&quot;</span>: datetime.now().strftime(<span class="hljs-string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>),<br>    <span class="hljs-string">&quot;papers&quot;</span>: &#123;&#125;,<br>    <span class="hljs-string">&quot;errors&quot;</span>: []<br>&#125;<br><br><span class="hljs-comment"># JSON日志文件路径</span><br>log_file = <span class="hljs-string">&quot;ijcai_monitor_log.json&quot;</span><br><br><span class="hljs-comment"># 如果日志文件已存在,加载之前的日志</span><br><span class="hljs-keyword">if</span> os.path.exists(log_file):<br>    <span class="hljs-keyword">try</span>:<br>        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(log_file, <span class="hljs-string">&quot;r&quot;</span>, encoding=<span class="hljs-string">&quot;utf-8&quot;</span>) <span class="hljs-keyword">as</span> f:<br>            log_data = json.load(f)<br>    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;无法加载现有日志文件: <span class="hljs-subst">&#123;e&#125;</span>&quot;</span>)<br><br><span class="hljs-comment"># 更新日志文件</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">update_log</span>():<br>    <span class="hljs-keyword">try</span>:<br>        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(log_file, <span class="hljs-string">&quot;w&quot;</span>, encoding=<span class="hljs-string">&quot;utf-8&quot;</span>) <span class="hljs-keyword">as</span> f:<br>            json.dump(log_data, f, ensure_ascii=<span class="hljs-literal">False</span>, indent=<span class="hljs-number">2</span>)<br>    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;无法更新日志文件: <span class="hljs-subst">&#123;e&#125;</span>&quot;</span>)<br><br><span class="hljs-comment"># Cookie 与 Headers, 按F12获取（开发者模式下，应用栏）</span><br>cookies = &#123;<br>    <span class="hljs-string">&quot;MC1&quot;</span>: <span class="hljs-string">&quot;GUID=44928b063b3947518a67995891bf0044&amp;HASH=4492&amp;LV=202504&amp;V=4&amp;LU=1744614339104&quot;</span>,<br>    <span class="hljs-string">&quot;.TRACK&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>,<br>    <span class="hljs-string">&quot;.ROLE&quot;</span>: <span class="hljs-string">&quot;Author&quot;</span>,<br>    <span class="hljs-string">&quot;.AspNetCore.Cookies&quot;</span>: <span class="hljs-string">&quot;CfDJ8JC1yWmjADxLvSP8DVdQ7PM9h9aXhei2M9X2n1gyKZDAzln5XwsqmKIfwA7qkbms31Y_5wMn76scpSspYkqF3VYwSt7u5lNTN21OIC97gNoumKnQMF1fI1-xerQAvNLX29vtm69sC-a0JdmHODOWNkq6L7FvjwH3ABskXLX09Y9VBLsVGuliIZhKXo0nuTkQUHDF4wqhxbuS6X3YlVnGv5DEcDDzes5lQzjWnfPXilfObgRwz1fCXZIstCbtNdZNutC7m2OfJtYP0GdssaJXQLxONo5IZjFoiVae-90jdRR-&quot;</span><br>&#125;<br><br>headers = &#123;<br>    <span class="hljs-string">&quot;User-Agent&quot;</span>: <span class="hljs-string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36&quot;</span>,<br>    <span class="hljs-string">&quot;Accept&quot;</span>: <span class="hljs-string">&quot;application/json, text/plain, */*&quot;</span>,<br>    <span class="hljs-string">&quot;Accept-Language&quot;</span>: <span class="hljs-string">&quot;en-US,en;q=0.9&quot;</span>,<br>    <span class="hljs-string">&quot;Referer&quot;</span>: <span class="hljs-string">&quot;https://cmt3.research.microsoft.com/IJCAI2025/Submission/Index&quot;</span>,<br>    <span class="hljs-string">&quot;Origin&quot;</span>: <span class="hljs-string">&quot;https://cmt3.research.microsoft.com&quot;</span><br>&#125;<br><br><span class="hljs-comment"># 根据环境决定是否使用代理</span><br><span class="hljs-keyword">if</span> platform.system() == <span class="hljs-string">&quot;Windows&quot;</span>:<br>    <span class="hljs-comment"># 仅在Windows下使用代理</span><br>    <span class="hljs-comment"># proxies = &#123;</span><br>    <span class="hljs-comment">#     &quot;http&quot;: &quot;http://127.0.0.1:9090&quot;,</span><br>    <span class="hljs-comment">#     &quot;https&quot;: &quot;http://127.0.0.1:7890&quot;</span><br>    <span class="hljs-comment"># &#125;</span><br>    proxies = <span class="hljs-literal">None</span><br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-comment"># Linux或其他系统不使用代理</span><br>    proxies = <span class="hljs-literal">None</span><br><br><span class="hljs-comment"># 邮件配置</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">send_email</span>(<span class="hljs-params">subject, body</span>):<br>    sender = <span class="hljs-string">&quot;&quot;</span>         <span class="hljs-comment">#email</span><br>    receiver = <span class="hljs-string">&quot;&quot;</span>  <span class="hljs-comment">#Email</span><br>    password = <span class="hljs-string">&quot;&quot;</span>  <span class="hljs-comment"># 您的密码</span><br><br>    msg = MIMEMultipart()<br>    msg[<span class="hljs-string">&quot;From&quot;</span>] = sender<br>    msg[<span class="hljs-string">&quot;To&quot;</span>] = receiver<br>    msg[<span class="hljs-string">&quot;Subject&quot;</span>] = subject<br>    msg.attach(MIMEText(body, <span class="hljs-string">&quot;plain&quot;</span>))<br><br>    <span class="hljs-keyword">try</span>:<br>        <span class="hljs-comment"># 注意: 对于Outlook邮箱,需要修改SMTP服务器和端口</span><br>        server = smtplib.SMTP(<span class="hljs-string">&quot;smtp.office365.com&quot;</span>, <span class="hljs-number">587</span>)<br>        server.starttls()<br>        server.login(sender, password)<br>        server.sendmail(sender, receiver, msg.as_string())<br>        server.quit()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;📧 Email sent successfully!&quot;</span>)<br>    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;❌ Email send failed: <span class="hljs-subst">&#123;e&#125;</span>&quot;</span>)<br><br><span class="hljs-comment"># 主循环</span><br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    <span class="hljs-keyword">for</span> rid, url <span class="hljs-keyword">in</span> urls.items():<br>        <span class="hljs-keyword">try</span>:<br>            response = requests.get(url, headers=headers, cookies=cookies, proxies=proxies, timeout=<span class="hljs-number">10</span>)<br>            <span class="hljs-keyword">if</span> response.status_code == <span class="hljs-number">200</span>:<br>                data = response.json()<br>                <br>                <span class="hljs-comment"># 初始化该论文的日志记录(如果不存在)</span><br>                <span class="hljs-keyword">if</span> <span class="hljs-built_in">str</span>(rid) <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> log_data[<span class="hljs-string">&quot;papers&quot;</span>]:<br>                    log_data[<span class="hljs-string">&quot;papers&quot;</span>][<span class="hljs-built_in">str</span>(rid)] = &#123;<br>                        <span class="hljs-string">&quot;title&quot;</span>: data.get(<span class="hljs-string">&quot;SubmissionTitle&quot;</span>, <span class="hljs-string">&quot;Unknown Title&quot;</span>),<br>                        <span class="hljs-string">&quot;score_history&quot;</span>: [],<br>                        <span class="hljs-string">&quot;last_check&quot;</span>: datetime.now().strftime(<span class="hljs-string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>)<br>                    &#125;<br>                <br>                <span class="hljs-keyword">for</span> question <span class="hljs-keyword">in</span> data.get(<span class="hljs-string">&quot;Questions&quot;</span>, []):<br>                    <span class="hljs-keyword">if</span> question.get(<span class="hljs-string">&quot;Order&quot;</span>) == <span class="hljs-number">7</span>:<br>                        new_value = question.get(<span class="hljs-string">&quot;Answers&quot;</span>, [&#123;&#125;])[<span class="hljs-number">0</span>].get(<span class="hljs-string">&quot;Value&quot;</span>)<br>                        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;[<span class="hljs-subst">&#123;rid&#125;</span>] <span class="hljs-subst">&#123;new_value&#125;</span>&quot;</span>, end=<span class="hljs-string">&quot;&quot;</span>)<br>                        <br>                        <span class="hljs-comment"># 更新日志的最后检查时间</span><br>                        log_data[<span class="hljs-string">&quot;papers&quot;</span>][<span class="hljs-built_in">str</span>(rid)][<span class="hljs-string">&quot;last_check&quot;</span>] = datetime.now().strftime(<span class="hljs-string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>)<br>                        <br>                        <span class="hljs-keyword">if</span> rid <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> last_scores:<br>                            last_scores[rid] = new_value<br>                            <br>                            <span class="hljs-comment"># 记录初始分数</span><br>                            log_data[<span class="hljs-string">&quot;papers&quot;</span>][<span class="hljs-built_in">str</span>(rid)][<span class="hljs-string">&quot;score_history&quot;</span>].append(&#123;<br>                                <span class="hljs-string">&quot;time&quot;</span>: datetime.now().strftime(<span class="hljs-string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>),<br>                                <span class="hljs-string">&quot;score&quot;</span>: new_value,<br>                                <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;initial&quot;</span><br>                            &#125;)<br>                            <br>                        <span class="hljs-keyword">elif</span> new_value != last_scores[rid]:<br>                            <span class="hljs-comment"># 发生了变化</span><br>                            old = last_scores[rid]<br>                            last_scores[rid] = new_value  <span class="hljs-comment"># 更新缓存值</span><br>                            title = data.get(<span class="hljs-string">&quot;SubmissionTitle&quot;</span>, <span class="hljs-string">&quot;Unknown Title&quot;</span>)<br>                            <br>                            <span class="hljs-comment"># 记录分数变化</span><br>                            log_data[<span class="hljs-string">&quot;papers&quot;</span>][<span class="hljs-built_in">str</span>(rid)][<span class="hljs-string">&quot;score_history&quot;</span>].append(&#123;<br>                                <span class="hljs-string">&quot;time&quot;</span>: datetime.now().strftime(<span class="hljs-string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>),<br>                                <span class="hljs-string">&quot;score&quot;</span>: new_value,<br>                                <span class="hljs-string">&quot;previous_score&quot;</span>: old,<br>                                <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;change&quot;</span><br>                            &#125;)<br>                            <br>                            msg = (<br>                                <span class="hljs-string">f&quot;🔔 Score Changed!\n\n&quot;</span><br>                                <span class="hljs-string">f&quot;Paper ID: <span class="hljs-subst">&#123;rid&#125;</span>\n&quot;</span><br>                                <span class="hljs-string">f&quot;Title: <span class="hljs-subst">&#123;title&#125;</span>\n&quot;</span><br>                                <span class="hljs-string">f&quot;Old Score: <span class="hljs-subst">&#123;old&#125;</span>\n&quot;</span><br>                                <span class="hljs-string">f&quot;New Score: <span class="hljs-subst">&#123;new_value&#125;</span>\n&quot;</span><br>                                <span class="hljs-string">f&quot;Link: <span class="hljs-subst">&#123;url&#125;</span>&quot;</span><br>                            )<br>                            <span class="hljs-built_in">print</span>(msg)<br>                            send_email(<span class="hljs-string">&quot;IJCAI2025 - Review Score Changed&quot;</span>, msg)<br>                        <span class="hljs-keyword">else</span>:<br>                            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot; - No change&quot;</span>)<br>                        <span class="hljs-keyword">break</span><br>                <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&quot;</span>)<br>            <span class="hljs-keyword">else</span>:<br>                error_msg = <span class="hljs-string">f&quot;Failed to fetch <span class="hljs-subst">&#123;rid&#125;</span>, Status code: <span class="hljs-subst">&#123;response.status_code&#125;</span>&quot;</span><br>                <span class="hljs-built_in">print</span>(error_msg)<br>                <br>                <span class="hljs-comment"># 记录错误</span><br>                log_data[<span class="hljs-string">&quot;errors&quot;</span>].append(&#123;<br>                    <span class="hljs-string">&quot;time&quot;</span>: datetime.now().strftime(<span class="hljs-string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>),<br>                    <span class="hljs-string">&quot;paper_id&quot;</span>: rid,<br>                    <span class="hljs-string">&quot;error&quot;</span>: error_msg<br>                &#125;)<br>                <br>        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>            error_msg = <span class="hljs-string">f&quot;[Error] <span class="hljs-subst">&#123;rid&#125;</span> -&gt; <span class="hljs-subst">&#123;e&#125;</span>&quot;</span><br>            <span class="hljs-built_in">print</span>(error_msg)<br>            <br>            <span class="hljs-comment"># 记录错误</span><br>            log_data[<span class="hljs-string">&quot;errors&quot;</span>].append(&#123;<br>                <span class="hljs-string">&quot;time&quot;</span>: datetime.now().strftime(<span class="hljs-string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>),<br>                <span class="hljs-string">&quot;paper_id&quot;</span>: rid,<br>                <span class="hljs-string">&quot;error&quot;</span>: <span class="hljs-built_in">str</span>(e)<br>            &#125;)<br>        <br>        <span class="hljs-comment"># 每次检查后更新日志文件</span><br>        update_log()<br><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;\n[<span class="hljs-subst">&#123;datetime.now().strftime(<span class="hljs-string">&#x27;%Y-%m-%d %H:%M:%S&#x27;</span>)&#125;</span>] 等待下一次检查...\n&quot;</span>)<br>    <span class="hljs-comment"># 每 100 秒检查一次</span><br>    time.sleep(<span class="hljs-number">100</span>)<br></code></pre></td></tr></table></figure>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="🔍-如何查看-Meta-review"><a href="#🔍-如何查看-Meta-review" class="headerlink" title="🔍 如何查看 Meta-review"></a>🔍 如何查看 Meta-review</h2><p><strong>CMT 在 UI 上并不会第一时间公开 Meta-review，</strong> 但通过接口我们是可以提前看到的。</p>
+<h3 id="🚀-爆破方法"><a href="#🚀-爆破方法" class="headerlink" title="🚀 爆破方法"></a>🚀 爆破方法</h3><ol>
+<li><p>登录 CMT 后复制 Cookie。</p>
+</li>
+<li><p>使用以下脚本暴力访问 MetaReviewViews 接口：</p>
+<ul>
+<li>成功响应的 ID 即为你投稿的 Meta-review ID。</li>
+</ul>
+</li>
+<li><p>用浏览器打开：</p>
+</li>
+</ol>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">https:<span class="hljs-regexp">//</span>cmt3.research.microsoft.com<span class="hljs-regexp">/api/</span>odata<span class="hljs-regexp">/IJCAI2025/</span>MetaReviewViews/xxx<br></code></pre></td></tr></table></figure>
+
+<p>即可获取内容。</p>
+<h3 id="🔐-爆破脚本"><a href="#🔐-爆破脚本" class="headerlink" title="🔐 爆破脚本"></a>🔐 爆破脚本</h3><details>
+<summary>点击查看爆破脚本源码</summary>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><span class="hljs-keyword">from</span> concurrent.futures <span class="hljs-keyword">import</span> ThreadPoolExecutor<br><br>cookies = &#123;<br>    <span class="hljs-comment"># &quot;MC1&quot;: &quot;GUID=44928b063b3947518a67995891bf0044&amp;HASH=4492&amp;LV=202504&amp;V=4&amp;LU=1744614339104&quot;,</span><br>    <span class="hljs-string">&quot;.TRACK&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>,<br>    <span class="hljs-string">&quot;.ROLE&quot;</span>: <span class="hljs-string">&quot;Author&quot;</span>,<br>    <span class="hljs-string">&quot;.AspNetCore.Cookies&quot;</span>: <span class="hljs-string">&quot;CfDJ8JC1yWmjADxLvSP8DVdQ7PPSPO1yb6CuSpzMHAMB4uGge4NbgHYHw6lXfTJqiOH-6W4DmeRjtQRwQisMbTQiO7Zby5UW9Bd8xkV8zCOP1xSPjNu3Up2F7RbYaBfx2LmuQ4lPttZJ8wGNTZ7Ei4WjEwTC6G7my3y16Pl93196VhECARZXr2AvW5ptDj1fI7bDkSLHAXzLfX1fj8tNxJ-IMuQk4jqJRcbLGhCVBFKpD3pxhrI-h2edsJJusMcuDBSnI5R6EttkeRGI6X_7-DmZEm63uvQ2eT1OfxbmzKSyaHaS&quot;</span><br>&#125;<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">check_id</span>(<span class="hljs-params">session, base_url, <span class="hljs-built_in">id</span></span>):<br>    url = <span class="hljs-string">f&quot;<span class="hljs-subst">&#123;base_url&#125;</span>/<span class="hljs-subst">&#123;<span class="hljs-built_in">id</span>&#125;</span>&quot;</span><br>    <span class="hljs-keyword">try</span>:<br>        response = session.get(url)<br>        <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;error&#x27;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> response.text:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;✅ ID <span class="hljs-subst">&#123;<span class="hljs-built_in">id</span>&#125;</span> is valid: <span class="hljs-subst">&#123;response.text[:<span class="hljs-number">200</span>]&#125;</span>...&quot;</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-built_in">id</span><br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;❌ ID <span class="hljs-subst">&#123;<span class="hljs-built_in">id</span>&#125;</span> failed: <span class="hljs-subst">&#123;response.status_code&#125;</span> - <span class="hljs-subst">&#123;response.text[:<span class="hljs-number">500</span>]&#125;</span>&quot;</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">None</span><br>    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;⚠️ Error checking ID <span class="hljs-subst">&#123;<span class="hljs-built_in">id</span>&#125;</span>: <span class="hljs-subst">&#123;e&#125;</span>&quot;</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">None</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">check_valid_ids</span>(<span class="hljs-params">base_url, start_id, end_id</span>):<br>    valid_ids = []<br>    session = requests.Session()<br>    session.cookies.update(cookies)<br>    <br>    left = start_id<br>    right = end_id<br>    <br>    <span class="hljs-keyword">with</span> ThreadPoolExecutor(max_workers=<span class="hljs-number">2</span>) <span class="hljs-keyword">as</span> executor:<br>        <span class="hljs-keyword">while</span> left &lt;= right:<br>            <span class="hljs-comment"># 同时检查左右两端</span><br>            future_left = executor.submit(check_id, session, base_url, left)<br>            future_right = executor.submit(check_id, session, base_url, right) <span class="hljs-keyword">if</span> left != right <span class="hljs-keyword">else</span> <span class="hljs-literal">None</span><br>            <br>            <span class="hljs-comment"># 获取结果</span><br>            result_left = future_left.result()<br>            <span class="hljs-keyword">if</span> result_left <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:<br>                valid_ids.append(result_left)<br>                <br>            <span class="hljs-keyword">if</span> future_right:<br>                result_right = future_right.result()<br>                <span class="hljs-keyword">if</span> result_right <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:<br>                    valid_ids.append(result_right)<br>            <br>            left += <span class="hljs-number">1</span><br>            right -= <span class="hljs-number">1</span><br>            <br>            <span class="hljs-comment"># 如果找到有效ID，可以提前结束</span><br>            <span class="hljs-keyword">if</span> valid_ids:<br>                <span class="hljs-comment"># break</span><br>                <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Found valid IDs: <span class="hljs-subst">&#123;valid_ids&#125;</span>&quot;</span>)<br>                <span class="hljs-comment"># 继续检查剩余的ID</span><br>                <br>    <span class="hljs-keyword">return</span> valid_ids<br><br>base_url = <span class="hljs-string">&quot;https://cmt3.research.microsoft.com/api/odata/IJCAI2025/MetaReviewViews&quot;</span><br><span class="hljs-comment"># base_url = &quot;https://cmt3.research.microsoft.com/api/odata/IJCAI2025/SeniorMetaReviewerNoteViews&quot;</span><br>start_id, end_id = <span class="hljs-number">0</span>, <span class="hljs-number">10000</span><br>valid_ids = check_valid_ids(base_url, start_id, end_id)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nValid IDs:&quot;</span>, valid_ids)<br></code></pre></td></tr></table></figure>
+
+</details>
+
+<hr>
+<h2 id="🕵️‍♂️-提前获取结果"><a href="#🕵️‍♂️-提前获取结果" class="headerlink" title="🕵️‍♂️ 提前获取结果"></a>🕵️‍♂️ 提前获取结果</h2><p>除了评分和 Meta-review，有时我们还想<strong>尽早知道论文的最终状态</strong>。虽然 CMT 没有在 UI 上直接显示，但我们依然可以通过接口拿到 SubmissionStatus。</p>
+<h3 id="📌-操作步骤"><a href="#📌-操作步骤" class="headerlink" title="📌 操作步骤"></a>📌 操作步骤</h3><ol>
+<li>访问以下链接，获取你论文的 Submission ID 对应的 <code>StatusId</code>：</li>
+</ol>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk"><br>[https:<span class="hljs-regexp">//</span>cmt3.research.microsoft.com<span class="hljs-regexp">/api/</span>odata<span class="hljs-regexp">/IJCAI2025/</span>Submissions<span class="hljs-regexp">/你的论文编号](https:/</span><span class="hljs-regexp">/cmt3.research.microsoft.com/</span>api<span class="hljs-regexp">/odata/</span>IJCAI2025<span class="hljs-regexp">/Submissions/</span>你的论文编号)<br><br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>然后用该 <code>StatusId</code> 去下面这个接口对应结果：</li>
+</ol>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk"><br>[https:<span class="hljs-regexp">//</span>cmt3.research.microsoft.com<span class="hljs-regexp">/api/</span>odata<span class="hljs-regexp">/IJCAI2025/</span>SubmissionStatuses](https:<span class="hljs-regexp">//</span>cmt3.research.microsoft.com<span class="hljs-regexp">/api/</span>odata<span class="hljs-regexp">/IJCAI2025/</span>SubmissionStatuses)<br><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+<h2 id="🎯-总结"><a href="#🎯-总结" class="headerlink" title="🎯 总结"></a>🎯 总结</h2><p>这一年的 IJCAI 投稿过程中，我学到了很多，也踩了不少坑。总结几点经验分享如下：</p>
+<ul>
+<li><strong>接口随时可能改动</strong>：今年的接口结构相比去年有改动，建议务必注意抓包调试。</li>
+<li><strong>邮箱提醒是刚需</strong>：有些评分变化是在凌晨发生的，邮箱提醒能第一时间知道。</li>
+<li><strong>Meta-review 不一定有用</strong>：提前看到 Meta-review 虽然能提前准备 rebuttal 或预期结果，但最终结果未必一致。</li>
+</ul>
+<p>如果你也准备投稿 IJCAI，希望这些工具和经验能帮到你。欢迎交流分享！</p>
+<h1 id="提前获取结果"><a href="#提前获取结果" class="headerlink" title="提前获取结果"></a>提前获取结果</h1><p>通过如下链接获取对应的status id<br><a target="_blank" rel="noopener" href="https://cmt3.research.microsoft.com/api/odata/IJCAI2025/Submissions/%E8%AE%BA%E6%96%87%E7%BC%96%E5%8F%B7">https://cmt3.research.microsoft.com/api/odata/IJCAI2025/Submissions/论文编号</a></p>
+<p>对照如下链接中的状态，即可获取结果：<br><a target="_blank" rel="noopener" href="https://cmt3.research.microsoft.com/api/odata/IJCAI2025/SubmissionStatuses">https://cmt3.research.microsoft.com/api/odata/IJCAI2025/SubmissionStatuses</a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AE%BA%E6%96%87%E6%8A%95%E7%A8%BF/" class="category-chain-item">论文投稿</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/IJCAI/" class="print-no-link">#IJCAI</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>IJCAI 爆破教程!</div>
+      <div>https://chengz23.github.io/2025/05/03/IJCAI爆破教程/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>chengz23</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年5月3日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/04/22/tmux%E4%BB%8B%E7%BB%8D/" title="tmux终端详解!">
+                        <span class="hidden-mobile">tmux终端详解!</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"pfkwd28QGcPFifeHP8qWjQo1-gzGzoHsz","appKey":"XH8XnSrh98kHazgszo262Jcn","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
