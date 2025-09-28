@@ -27,7 +27,7 @@
 <meta property="og:description" content="IJCAI 2025 投稿监控与经验总结 投稿 IJCAI 2025 是一次难忘的经历，本文记录了我的投稿过程、实时评分监控、Meta-review 获取方式等一些实用的经验，希望对未来准备 IJCAI 的朋友有所帮助。   📊 接受率与背景本年度 IJCAI 2025 的接受量 &#x2F; 投稿量为：  接受量：1042 投稿量：5404 接受率：19.3%  相比往年低于 15% 的接受率">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-05-03T14:30:00.000Z">
-<meta property="article:modified_time" content="2025-05-03T07:35:51.444Z">
+<meta property="article:modified_time" content="2025-05-03T07:40:46.184Z">
 <meta property="article:author" content="chengz23">
 <meta property="article:tag" content="IJCAI">
 <meta name="twitter:card" content="summary_large_image">
@@ -240,7 +240,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2k 字
+          1.9k 字
         
       </span>
     
@@ -385,15 +385,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 <h2 id="🔍-如何查看-Meta-review"><a href="#🔍-如何查看-Meta-review" class="headerlink" title="🔍 如何查看 Meta-review"></a>🔍 如何查看 Meta-review</h2><p><strong>CMT 在 UI 上并不会第一时间公开 Meta-review，</strong> 但通过接口我们是可以提前看到的。</p>
 <h3 id="🚀-爆破方法"><a href="#🚀-爆破方法" class="headerlink" title="🚀 爆破方法"></a>🚀 爆破方法</h3><ol>
 <li><p>登录 CMT 后复制 Cookie。</p>
@@ -406,8 +397,7 @@
 <li><p>用浏览器打开：</p>
 </li>
 </ol>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">https:<span class="hljs-regexp">//</span>cmt3.research.microsoft.com<span class="hljs-regexp">/api/</span>odata<span class="hljs-regexp">/IJCAI2025/</span>MetaReviewViews/xxx<br></code></pre></td></tr></table></figure>
-
+<p><a target="_blank" rel="noopener" href="https://cmt3.research.microsoft.com/api/odata/IJCAI2025/MetaReviewViews/xxx">https://cmt3.research.microsoft.com/api/odata/IJCAI2025/MetaReviewViews/xxx</a></p>
 <p>即可获取内容。</p>
 <h3 id="🔐-爆破脚本"><a href="#🔐-爆破脚本" class="headerlink" title="🔐 爆破脚本"></a>🔐 爆破脚本</h3><details>
 <summary>点击查看爆破脚本源码</summary>
@@ -421,20 +411,11 @@
 <h3 id="📌-操作步骤"><a href="#📌-操作步骤" class="headerlink" title="📌 操作步骤"></a>📌 操作步骤</h3><ol>
 <li>访问以下链接，获取你论文的 Submission ID 对应的 <code>StatusId</code>：</li>
 </ol>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk"><br>[https:<span class="hljs-regexp">//</span>cmt3.research.microsoft.com<span class="hljs-regexp">/api/</span>odata<span class="hljs-regexp">/IJCAI2025/</span>Submissions<span class="hljs-regexp">/你的论文编号](https:/</span><span class="hljs-regexp">/cmt3.research.microsoft.com/</span>api<span class="hljs-regexp">/odata/</span>IJCAI2025<span class="hljs-regexp">/Submissions/</span>你的论文编号)<br><br></code></pre></td></tr></table></figure>
-
+<p><a target="_blank" rel="noopener" href="https://cmt3.research.microsoft.com/api/odata/IJCAI2025/Submissions/%E4%BD%A0%E7%9A%84%E8%AE%BA%E6%96%87%E7%BC%96%E5%8F%B7">https://cmt3.research.microsoft.com/api/odata/IJCAI2025/Submissions/你的论文编号</a></p>
 <ol start="2">
 <li>然后用该 <code>StatusId</code> 去下面这个接口对应结果：</li>
 </ol>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk"><br>[https:<span class="hljs-regexp">//</span>cmt3.research.microsoft.com<span class="hljs-regexp">/api/</span>odata<span class="hljs-regexp">/IJCAI2025/</span>SubmissionStatuses](https:<span class="hljs-regexp">//</span>cmt3.research.microsoft.com<span class="hljs-regexp">/api/</span>odata<span class="hljs-regexp">/IJCAI2025/</span>SubmissionStatuses)<br><br></code></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
+<p><a target="_blank" rel="noopener" href="https://cmt3.research.microsoft.com/api/odata/IJCAI2025/SubmissionStatuses">https://cmt3.research.microsoft.com/api/odata/IJCAI2025/SubmissionStatuses</a></p>
 <h2 id="🎯-总结"><a href="#🎯-总结" class="headerlink" title="🎯 总结"></a>🎯 总结</h2><p>这一年的 IJCAI 投稿过程中，我学到了很多，也踩了不少坑。总结几点经验分享如下：</p>
 <ul>
 <li><strong>接口随时可能改动</strong>：今年的接口结构相比去年有改动，建议务必注意抓包调试。</li>
@@ -442,8 +423,6 @@
 <li><strong>Meta-review 不一定有用</strong>：提前看到 Meta-review 虽然能提前准备 rebuttal 或预期结果，但最终结果未必一致。</li>
 </ul>
 <p>如果你也准备投稿 IJCAI，希望这些工具和经验能帮到你。欢迎交流分享！</p>
-<h1 id="提前获取结果"><a href="#提前获取结果" class="headerlink" title="提前获取结果"></a>提前获取结果</h1><p>通过如下链接获取对应的status id<br><a target="_blank" rel="noopener" href="https://cmt3.research.microsoft.com/api/odata/IJCAI2025/Submissions/%E8%AE%BA%E6%96%87%E7%BC%96%E5%8F%B7">https://cmt3.research.microsoft.com/api/odata/IJCAI2025/Submissions/论文编号</a></p>
-<p>对照如下链接中的状态，即可获取结果：<br><a target="_blank" rel="noopener" href="https://cmt3.research.microsoft.com/api/odata/IJCAI2025/SubmissionStatuses">https://cmt3.research.microsoft.com/api/odata/IJCAI2025/SubmissionStatuses</a></p>
 
                 
               </div>
@@ -533,6 +512,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2025/09/28/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8C%82%E8%BD%BD%E6%A2%AF%E5%AD%90/" title="">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">

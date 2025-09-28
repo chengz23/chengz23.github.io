@@ -19,15 +19,15 @@
   <meta name="author" content="chengz23">
   <meta name="keywords" content="">
   
-    <meta name="description" content="休对故人思故国，且将新火试新茶，诗酒趁年华。">
+    <meta name="description" content="🚀 Linux 服务器运行 Clash 简易教程 📥 步骤 1：上传 Clash 到服务器你可以直接拖动上传，或使用 scp： 1scp clash-linux-amd64 root@your_server_ip:~&#x2F;   📂 步骤 2：上传配置文件同样可以直接拖动上传，或执行以下命令： 12mkdir -p ~&#x2F;.config&#x2F;clashscp config.yaml root@your_">
 <meta property="og:type" content="article">
 <meta property="og:title" content="继续革命">
-<meta property="og:url" content="https://chengz23.github.io/2025/04/21/Diffusion%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:url" content="https://chengz23.github.io/2025/09/28/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8C%82%E8%BD%BD%E6%A2%AF%E5%AD%90/index.html">
 <meta property="og:site_name" content="继续革命">
-<meta property="og:description" content="休对故人思故国，且将新火试新茶，诗酒趁年华。">
+<meta property="og:description" content="🚀 Linux 服务器运行 Clash 简易教程 📥 步骤 1：上传 Clash 到服务器你可以直接拖动上传，或使用 scp： 1scp clash-linux-amd64 root@your_server_ip:~&#x2F;   📂 步骤 2：上传配置文件同样可以直接拖动上传，或执行以下命令： 12mkdir -p ~&#x2F;.config&#x2F;clashscp config.yaml root@your_">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-04-21T11:52:58.827Z">
-<meta property="article:modified_time" content="2025-04-21T11:53:01.261Z">
+<meta property="article:published_time" content="2025-09-28T08:16:43.913Z">
+<meta property="article:modified_time" content="2025-09-28T08:26:56.542Z">
 <meta property="article:author" content="chengz23">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -227,8 +227,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-21 19:52" pubdate>
-          2025年4月21日 晚上
+        <time datetime="2025-09-28 16:16" pubdate>
+          2025年9月28日 下午
         </time>
       </span>
     
@@ -239,7 +239,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          169 字
         
       </span>
     
@@ -250,7 +250,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -301,7 +301,29 @@
             
               <div class="markdown-body">
                 
-                
+                <h1 id="🚀-Linux-服务器运行-Clash-简易教程"><a href="#🚀-Linux-服务器运行-Clash-简易教程" class="headerlink" title="🚀 Linux 服务器运行 Clash 简易教程"></a>🚀 Linux 服务器运行 Clash 简易教程</h1><hr>
+<h2 id="📥-步骤-1：上传-Clash-到服务器"><a href="#📥-步骤-1：上传-Clash-到服务器" class="headerlink" title="📥 步骤 1：上传 Clash 到服务器"></a>📥 步骤 1：上传 Clash 到服务器</h2><p>你可以直接拖动上传，或使用 <code>scp</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">scp clash-linux-amd64 root@your_server_ip:~/<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="📂-步骤-2：上传配置文件"><a href="#📂-步骤-2：上传配置文件" class="headerlink" title="📂 步骤 2：上传配置文件"></a>📂 步骤 2：上传配置文件</h2><p>同样可以直接拖动上传，或执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> -p ~/.config/clash<br>scp config.yaml root@your_server_ip:~/.config/clash/<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="🔑-步骤-3：赋予执行权限"><a href="#🔑-步骤-3：赋予执行权限" class="headerlink" title="🔑 步骤 3：赋予执行权限"></a>🔑 步骤 3：赋予执行权限</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> u+x ~/clash<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="▶️-步骤-4：运行-Clash"><a href="#▶️-步骤-4：运行-Clash" class="headerlink" title="▶️ 步骤 4：运行 Clash"></a>▶️ 步骤 4：运行 Clash</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">~/clash<br></code></pre></td></tr></table></figure>
+
+<p><strong>输出示例：</strong></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-built_in">INFO</span>[0000] Mixed(http+socks5)<span class="hljs-built_in"> proxy </span>listening at: :7890<br><span class="hljs-built_in">INFO</span>[0000] RESTful API listening at: 127.0.0.1:9090<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="🌐-步骤-5：新开终端，设置代理并执行脚本"><a href="#🌐-步骤-5：新开终端，设置代理并执行脚本" class="headerlink" title="🌐 步骤 5：新开终端，设置代理并执行脚本"></a>🌐 步骤 5：新开终端，设置代理并执行脚本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> http_proxy=http://127.0.0.1:7890<br><span class="hljs-built_in">export</span> https_proxy=http://127.0.0.1:7890<br><br>bash your_download_script.sh<br><span class="hljs-comment"># 或者</span><br>python your_script.py<br></code></pre></td></tr></table></figure>
+
+<hr>
+<p>✨ 至此，Clash 已经在你的 Linux 服务器上成功运行，可以配合代理正常使用啦！</p>
+
                 
               </div>
             
@@ -319,7 +341,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div></div>
-      <div>https://chengz23.github.io/2025/04/21/Diffusion基础知识/</div>
+      <div>https://chengz23.github.io/2025/09/28/Linux服务器挂载梯子/</div>
     </div>
     <div class="license-meta">
       
@@ -331,7 +353,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月21日</div>
+          <div>2025年9月28日</div>
         </div>
       
       
@@ -363,18 +385,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/04/21/%E6%97%B6%E7%A9%BA%E9%A2%84%E6%B5%8B%E4%BB%8B%E7%BB%8D/" title="时空预测介绍">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">时空预测介绍</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/04/16/Diffusion%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84%E6%8C%87%E5%8D%97/" title="Diffusion 学习路径指南!">
-                        <span class="hidden-mobile">Diffusion 学习路径指南!</span>
+                      <a href="/2025/05/03/IJCAI%E7%88%86%E7%A0%B4%E6%95%99%E7%A8%8B/" title="IJCAI 爆破教程!">
+                        <span class="hidden-mobile">IJCAI 爆破教程!</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
